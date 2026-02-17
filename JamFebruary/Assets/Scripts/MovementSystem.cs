@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.CompilerServices;
 using UnityEditor;
 using UnityEngine;
@@ -6,15 +7,19 @@ public class MovementSystem : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 3f;
     [SerializeField] private Animator _playerAnimator;
+
+    private ItemPickupSystem _itemPickupSystem;
+
     private Rigidbody2D _rigidbody;
     private Vector2 _movementVector;
 
     private Vector3 _originalScale;
 
     public InputSystem_Actions InputSystemActions;
+    //public event Action OnInteractPressed;
 
-    private MovementSystem _instance;
-    public MovementSystem Instance { get { return _instance; } }
+    private static MovementSystem _instance;
+    public static MovementSystem Instance { get { return _instance; } }
 
     private void Awake()
     {
@@ -29,6 +34,8 @@ public class MovementSystem : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
 
+        _itemPickupSystem = gameObject.GetComponent<ItemPickupSystem>();
+
         _rigidbody = GetComponent<Rigidbody2D>();
         _originalScale = transform.localScale;
 
@@ -36,6 +43,14 @@ public class MovementSystem : MonoBehaviour
 
         InputSystemActions.Player.Move.performed += OnMove;
         InputSystemActions.Player.Move.canceled += OnMove;
+
+        InputSystemActions.Player.Interact.started += OnInteract;
+    }
+
+    private void OnInteract(UnityEngine.InputSystem.InputAction.CallbackContext contect)
+    {
+        //OnInteractPressed?.Invoke();
+        _itemPickupSystem.OnPick();
     }
 
     private void OnEnable()

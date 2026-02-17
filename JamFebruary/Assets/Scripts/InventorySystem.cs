@@ -11,11 +11,11 @@ public class InventorySystem : MonoBehaviour
     {
         PickableObject.OnItemPicked -= HandleItemPicked;
     }
-    private void HandleItemPicked(InventoryItem item)
+    private void HandleItemPicked(InventoryItem item, GameObject physicalObject)
     {
-        AddItemToInventory(item);
+        AddItemToInventory(item, physicalObject);
     }
-    private void AddItemToInventory(InventoryItem item)
+    private void AddItemToInventory(InventoryItem item, GameObject physicalObject)
     {
         foreach (var slotObject in _inventorySlots)
         {
@@ -23,6 +23,7 @@ public class InventorySystem : MonoBehaviour
             if(slot.IsOccupied == false)
             {
                 slot.SetItem(item);
+                Destroy(physicalObject);
                 return;
             }
         }
