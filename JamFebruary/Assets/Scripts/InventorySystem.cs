@@ -29,4 +29,16 @@ public class InventorySystem : MonoBehaviour
         }
         print("inventory full bro");
     }
+    public bool HasItem(InventoryItem itemToCheck)
+    {
+        foreach (var slotObject in _inventorySlots)
+        {
+            InventorySlot slot = slotObject.GetComponent<InventorySlot>();
+            if(slot.IsOccupied == true && slot.Item == itemToCheck)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }
