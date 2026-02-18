@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1779a5e4f57237a4088d5902a3eecc93, type: 3}
+  m_Name: WorkerSpiritNode
+  m_EditorClassIdentifier: 
+  dialogueText: That's the spirit! The boxes are right ahead of you, just get them
+    to the car.
+  responses:
+  - responseText: Alight, let's make some deliveries!
+    nextNode: {fileID: 11400000, guid: b34b769e6dfbb73499b70ab0ecdc1353, type: 2}
+  - responseText: On it.
+    nextNode: {fileID: 11400000, guid: b34b769e6dfbb73499b70ab0ecdc1353, type: 2}

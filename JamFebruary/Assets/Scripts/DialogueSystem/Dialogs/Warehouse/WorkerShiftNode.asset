@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1779a5e4f57237a4088d5902a3eecc93, type: 3}
+  m_Name: WorkerShiftNode
+  m_EditorClassIdentifier: 
+  dialogueText: Got a weird shift for you today, stay sharp!
+  responses:
+  - responseText: Weird? How so?
+    nextNode: {fileID: 11400000, guid: de8627a3c73e9fb4790786129aacafb2, type: 2}
+  - responseText: Sure man, ready as always.
+    nextNode: {fileID: 11400000, guid: d900b666830291d49b40b454da605691, type: 2}
