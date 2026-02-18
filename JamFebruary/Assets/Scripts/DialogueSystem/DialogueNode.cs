@@ -1,15 +1,14 @@
-//Dialogue Node
-using System;
-using System.Collections.Generic;   
+using UnityEngine;
+using System.Collections.Generic;
 
-[System.Serializable]
-public class DialogueNode
+[CreateAssetMenu(menuName = "Dialogue/Node")]
+public class DialogueNode : ScriptableObject
 {
     public string dialogueText;
     public List<DialogueResponse> responses;
 
-    internal bool IsLastNode()
+    public bool IsLastNode()
     {
-        return responses.Count <= 0;
+        return responses == null || responses.Count == 0;
     }
 }

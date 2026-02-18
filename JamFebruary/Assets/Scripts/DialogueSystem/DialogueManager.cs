@@ -59,17 +59,22 @@ public class DialogueManager : MonoBehaviour
     }
 
     // Handles response selection and triggers next dialogue node
-    public void SelectResponse(DialogueResponse response, string title)
+    public void SelectResponse( DialogueResponse response, string title)
     {
         if (!response.nextNode.IsLastNode())
         {
-            StartDialogue(title, response.nextNode);
-
-            // Save progress back to actor
             _currentActor?.SetProgress(response.nextNode);
+
+            StartDialogue(
+                title,
+                response.nextNode,
+                _currentActor);
         }
         else
         {
+            // Dialogue ended
+            _currentActor?.OnDialogueFinished();
+
             HideDialogue();
         }
     }

@@ -41,4 +41,16 @@ public class InventorySystem : MonoBehaviour
         }
         return false;
     }
+    public void RemoveItem(InventoryItem itemToRemove)
+    {
+        foreach(var slotObject in _inventorySlots)
+        {
+            InventorySlot slot = slotObject.GetComponent<InventorySlot>();
+            if(slot.IsOccupied == true && slot.Item == itemToRemove)
+            {
+                slot.ClearSlot();
+                return;
+            }
+        }
+    }
 }

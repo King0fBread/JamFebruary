@@ -32,7 +32,7 @@ public class MovementSystem : MonoBehaviour
             _instance = this;
         }
 
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
 
         _itemPickupSystem = gameObject.GetComponent<ItemPickupSystem>();
 

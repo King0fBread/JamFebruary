@@ -17,19 +17,34 @@ public class DialogueActor : MonoBehaviour, IInteractable
     private bool _hasMet = false;
     private DialogueNode _currentNode;
 
+    private enum ActorState
+    {
+        FirstMeeting,
+        WaitingForItem,
+        ItemDelivered,
+        Finished
+    }
+
+    [SerializeField] private ActorState _state = ActorState.FirstMeeting;
+
     public void Interact()
     {
         Dialogue dialogueToPlay = GetDialogue();
 
-        // Resume if exists
+        if (dialogueToPlay == null)
+            return; // No dialogue at this phase
+
         if (_currentNode != null)
         {
-            DialogueManager.Instance.StartDialogue(Name, _currentNode, this);
+            DialogueManager.Instance
+                .StartDialogue(Name, _currentNode, this);
         }
         else
         {
             _currentNode = dialogueToPlay.RootNode;
-            DialogueManager.Instance.StartDialogue(Name, _currentNode, this);
+
+            DialogueManager.Instance
+                .StartDialogue(Name, _currentNode, this);
         }
     }
 
@@ -50,21 +65,46 @@ public class DialogueActor : MonoBehaviour, IInteractable
 
     private Dialogue GetDialogue()
     {
-        // First ever interaction
-        if (!_hasMet)
+        switch (_state)
         {
-            _hasMet = true;
-            return FirstMeetingDialogue;
+            case ActorState.FirstMeeting:
+                return FirstMeetingDialogue;
+
+            case ActorState.WaitingForItem:
+
+                // Player has item → progress quest
+                if (RequiredItem != null &&
+                    _inventorySystem.HasItem(RequiredItem))
+                {
+                    _inventorySystem.RemoveItem(RequiredItem);
+
+                    _state = ActorState.ItemDelivered;
+
+                    return HasItemDialogue;
+                }
+
+                // Player came back empty → no dialogue
+                return null;
+
+            case ActorState.ItemDelivered:
+            case ActorState.Finished:
+                return null;
         }
 
-        // Later interactions
-        if (RequiredItem != null &&
-            _inventorySystem.HasItem(RequiredItem))
-        {
-            return HasItemDialogue;
-        }
+        return null;
+    }
+    public void OnDialogueFinished()
+    {
+        _currentNode = null;
 
-        return NoItemDialogue;
+        if (_state == ActorState.FirstMeeting)
+        {
+            _state = ActorState.WaitingForItem;
+        }
+        else if (_state == ActorState.ItemDelivered)
+        {
+            _state = ActorState.Finished;
+        }
     }
 
     public string GetInteractPrompt()
