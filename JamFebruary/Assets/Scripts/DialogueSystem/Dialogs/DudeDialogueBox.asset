@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9baff42925c24c74a838bde4670cd8ce, type: 3}
   m_Name: DudeDialogueBox
   m_EditorClassIdentifier: 
-  RootNode: {fileID: 11400000, guid: 8175ae1e864015544bdf20e38540da66, type: 2}
+  RootNode: {fileID: 11400000, guid: 1aa16d908f4f42046ab923b1dd42b60f, type: 2}

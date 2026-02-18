@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: Thats not a box
   responses:
-  - responseText: I don't have a box.
+  - responseText: It's a cat!
     nextNode: {fileID: 11400000, guid: 723e5ebbbeafe3a4983703c24bc3c871, type: 2}
   - responseText: Nope.
     nextNode: {fileID: 11400000, guid: 723e5ebbbeafe3a4983703c24bc3c871, type: 2}
