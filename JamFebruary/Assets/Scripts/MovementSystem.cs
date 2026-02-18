@@ -74,16 +74,20 @@ public class MovementSystem : MonoBehaviour
     private void MovePlayer()
     {
         float moveX = _movementVector.x;
-        Vector2 velocity = new Vector2(moveX * _moveSpeed, _rigidbody.linearVelocityY);
-        _rigidbody.linearVelocity = velocity;
 
+        Vector2 targetPos = _rigidbody.position +
+                            new Vector2(moveX * _moveSpeed * Time.fixedDeltaTime, 0);
 
-        //animator 
+        _rigidbody.MovePosition(targetPos);
 
-        //flip sprite
-        if(moveX != 0)
+        // Flip sprite
+        if (moveX != 0)
         {
-            transform.localScale = new Vector3(Mathf.Sign(moveX) * _originalScale.x, _originalScale.y, _originalScale.z);
+            transform.localScale = new Vector3(
+                Mathf.Sign(moveX) * _originalScale.x,
+                _originalScale.y,
+                _originalScale.z
+            );
         }
     }
 }
