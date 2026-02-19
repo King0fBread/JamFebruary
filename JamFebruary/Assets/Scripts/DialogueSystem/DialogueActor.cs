@@ -83,8 +83,8 @@ public class DialogueActor : MonoBehaviour, IInteractable
                     return HasItemDialogue;
                 }
 
-                // Player came back empty → no dialogue
-                return null;
+                // Player came back empty → False Item dialogue
+                return NoItemDialogue;
 
             case ActorState.ItemDelivered:
             case ActorState.Finished:

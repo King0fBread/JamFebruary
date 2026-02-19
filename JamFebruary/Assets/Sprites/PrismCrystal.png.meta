@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a4f8e2dd690bbde41ae11dcc0d296713
+guid: c4d3698f04891e54cba227efad130af6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 125586094725214292
-    second: InventoryHand_0
+      213: -5072468585534283884
+    second: PrismCrystal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: InventoryHand_0
+      name: PrismCrystal_0
       rect:
         serializedVersion: 2
-        x: 89
-        y: 22
-        width: 158
-        height: 180
+        x: 20
+        y: 15
+        width: 177
+        height: 181
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45033d443eb2eb100800000000000000
-      internalID: 125586094725214292
+      spriteID: 49f96e052b8fa99b0800000000000000
+      internalID: -5072468585534283884
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      InventoryHand_0: 125586094725214292
+      PrismCrystal_0: -5072468585534283884
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
