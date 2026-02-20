@@ -51,6 +51,7 @@ public class MovementSystem : MonoBehaviour
     {
         //OnInteractPressed?.Invoke();
         _itemPickupSystem.OnPick();
+        KnockingSystem.Instance.TryToggleKnockableResident();
     }
 
     private void OnEnable()
