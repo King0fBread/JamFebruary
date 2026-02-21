@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1779a5e4f57237a4088d5902a3eecc93, type: 3}
-  m_Name: NoboruGreetingNode
+  m_Name: ManamiSpecialNode 2
   m_EditorClassIdentifier: 
-  dialogueText: Hello?
+  dialogueText: I'm so glad you like it! I decaorated everything by myself, even
+    though my eyesight has been getting worse for the past year.
   responses:
-  - responseText: Hi sir, YukiGo delivery.
-    nextNode: {fileID: 11400000, guid: cabbc0cb130b1fc41a88be1c1274b5b8, type: 2}
-  - responseText: Hello.
-    nextNode: {fileID: 11400000, guid: 6201bfb9ed7a56641a99a78196f97a07, type: 2}
+  - responseText: I thought cats have good eyes.
+    nextNode: {fileID: 11400000, guid: 04164c59a6f688c4899dfc4aa0f2e07b, type: 2}

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1779a5e4f57237a4088d5902a3eecc93, type: 3}
-  m_Name: NoboruRequestNode
+  m_Name: ManamiGreetingNode
   m_EditorClassIdentifier: 
-  dialogueText: Get me a toolbox, buddy.
+  dialogueText: Yes?
   responses:
-  - responseText: Okay.
-    nextNode: {fileID: 11400000, guid: 2caea56041d62954aa2ef7517b63e733, type: 2}
-  - responseText: ':Lemon:'
-    nextNode: {fileID: 11400000, guid: 2caea56041d62954aa2ef7517b63e733, type: 2}
+  - responseText: Hello miss! I am from YukiGo delivery.
+    nextNode: {fileID: 11400000, guid: 6fbf2c8df00c7b649b806bb797052208, type: 2}
+  - responseText: Delivery service! Anything you would like?
+    nextNode: {fileID: 11400000, guid: 6fbf2c8df00c7b649b806bb797052208, type: 2}

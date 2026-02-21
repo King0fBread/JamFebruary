@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1779a5e4f57237a4088d5902a3eecc93, type: 3}
-  m_Name: NoboruGreetingNode
+  m_Name: NoboruNeighborsNode 1
   m_EditorClassIdentifier: 
-  dialogueText: Hello?
+  dialogueText: Oh you'll see, if you plan to work this entire building.
   responses:
-  - responseText: Hi sir, YukiGo delivery.
-    nextNode: {fileID: 11400000, guid: cabbc0cb130b1fc41a88be1c1274b5b8, type: 2}
-  - responseText: Hello.
-    nextNode: {fileID: 11400000, guid: 6201bfb9ed7a56641a99a78196f97a07, type: 2}
+  - responseText: I'll ask them to stop troubling you!
+    nextNode: {fileID: 11400000, guid: ad294d728d75e654ebf9a82e21295c98, type: 2}

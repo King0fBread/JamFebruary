@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1779a5e4f57237a4088d5902a3eecc93, type: 3}
+  m_Name: NoboruGreetingNode 2
+  m_EditorClassIdentifier: 
+  dialogueText: YukiGo, huh... I definitely need some things fixed up in here, this
+    place is a mess. So how does this new delivery service work again, I tell you
+    what I want and you bring it to me right away?
+  responses:
+  - responseText: Yes sir, what can I help you with?
+    nextNode: {fileID: 11400000, guid: c64cb8e10bc87d94a80e3bc310501fc2, type: 2}
+  - responseText: Pretty much.
+    nextNode: {fileID: 11400000, guid: c64cb8e10bc87d94a80e3bc310501fc2, type: 2}

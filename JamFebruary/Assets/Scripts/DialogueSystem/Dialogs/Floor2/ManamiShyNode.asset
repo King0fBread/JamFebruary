@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1779a5e4f57237a4088d5902a3eecc93, type: 3}
+  m_Name: ManamiShyNode
+  m_EditorClassIdentifier: 
+  dialogueText: Fashionable and shy, what a cutie. But wait, oh godness, forgive
+    me getting sidetracked, you said you are here to deliver a package?
+  responses:
+  - responseText: It's okay. Yes miss, I'm from YukiGo.
+    nextNode: {fileID: 11400000, guid: b8840ae1ad8bf84439143dea3136adc1, type: 2}
+  - responseText: I like a good conversation. You seem very special.
+    nextNode: {fileID: 11400000, guid: 4009609a4e2a8334196ee1505dad2014, type: 2}

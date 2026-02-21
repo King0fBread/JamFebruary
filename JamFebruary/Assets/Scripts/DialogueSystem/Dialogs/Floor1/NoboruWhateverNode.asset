@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1779a5e4f57237a4088d5902a3eecc93, type: 3}
-  m_Name: NoboruCorrectItemNode
+  m_Name: NoboruWhateverNode
   m_EditorClassIdentifier: 
-  dialogueText: Oh, hey. Hmm, a toolbox? Yeah, that's it! I bet there's some good
-    tools I can use in there. Thanks kid. I pay on the website, right?
+  dialogueText: Whatever. Look kid, I'm tired, it's been a long day. Just get me
+    something I can use to fix all those leaks and pipes.
   responses:
-  - responseText: Yes, you can pay remotely within 1 day.
+  - responseText: Got it, be right back!
     nextNode: {fileID: 11400000, guid: 2caea56041d62954aa2ef7517b63e733, type: 2}
-  - responseText: No problem and yes, it's YukiGo.com!
+  - responseText: I'll see what I can do.
     nextNode: {fileID: 11400000, guid: 2caea56041d62954aa2ef7517b63e733, type: 2}

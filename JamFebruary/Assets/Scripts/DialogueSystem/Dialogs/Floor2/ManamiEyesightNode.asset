@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1779a5e4f57237a4088d5902a3eecc93, type: 3}
-  m_Name: NoboruGreetingNode
+  m_Name: ManamiEyesightNode
   m_EditorClassIdentifier: 
-  dialogueText: Hello?
+  dialogueText: Oh I'm not really a cat, silly! But my soul is indeed shaped to be
+    very cat-like. Because of that, it was very easy for me to get my job at the
+    maid cafe - no fake cat ears or makeup needed, haha!
   responses:
-  - responseText: Hi sir, YukiGo delivery.
-    nextNode: {fileID: 11400000, guid: cabbc0cb130b1fc41a88be1c1274b5b8, type: 2}
-  - responseText: Hello.
-    nextNode: {fileID: 11400000, guid: 6201bfb9ed7a56641a99a78196f97a07, type: 2}
+  - responseText: Seems very convenient.
+    nextNode: {fileID: 11400000, guid: 7724d1ac92b3a5e41abfe23d21ebb068, type: 2}

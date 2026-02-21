@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1779a5e4f57237a4088d5902a3eecc93, type: 3}
   m_Name: NoboruFalseItemNode
   m_EditorClassIdentifier: 
-  dialogueText: That's not a toolbox, open your eyes.
+  dialogueText: Oh, it's you again. Wait a minute, that's not useful at all. Get
+    me something that I can actually use to fix things in the apartment. Where do
+    they hire you people from, jeez...
   responses:
-  - responseText: eh
+  - responseText: Sorry, I'll check again.
     nextNode: {fileID: 11400000, guid: 2caea56041d62954aa2ef7517b63e733, type: 2}
-  - responseText: lol
+  - responseText: On it...
     nextNode: {fileID: 11400000, guid: 2caea56041d62954aa2ef7517b63e733, type: 2}
