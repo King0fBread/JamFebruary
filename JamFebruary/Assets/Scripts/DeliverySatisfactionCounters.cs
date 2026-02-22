@@ -59,6 +59,9 @@ public class DeliverySatisfactionCounters : MonoBehaviour
     {
 
         if (_failScreen != null)
+        {
             _failScreen.SetActive(true);
+            SoundManager.instance.PlaySound(SoundManager.Sounds.PlayerFailed);
+        }
     }
 }

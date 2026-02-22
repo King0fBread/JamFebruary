@@ -93,10 +93,14 @@ public class MovementSystem : MonoBehaviour
             );
 
             _playerAnimator.CrossFade("PlayerRunning", 0, 0);
+
+            //SoundManager.instance.PlaySound(SoundManager.Sounds.PlayerWalking);
         }
         else
         {
             _playerAnimator.CrossFade("PlayerIdle", 0, 0);
+
+            //SoundManager.instance.StopSound(SoundManager.Sounds.PlayerWalking);
         }
     }
 }

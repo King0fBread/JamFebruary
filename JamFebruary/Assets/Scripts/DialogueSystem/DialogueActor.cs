@@ -20,6 +20,7 @@ public class DialogueActor : MonoBehaviour, IInteractable
 
     [SerializeField] private bool _isFinaleActor = false;
     [SerializeField] private GameObject _fadeObject;
+    [SerializeField] private bool _isWarehouseActor = false;
 
     public enum ActorState
     {
@@ -110,7 +111,19 @@ public class DialogueActor : MonoBehaviour, IInteractable
             if (_isFinaleActor)
             {
                 if (_fadeObject != null)
+                {
                     _fadeObject.SetActive(true);
+                    SoundManager.instance.PlaySound(SoundManager.Sounds.PlayerSucceeded);
+                }
+            }
+
+            //first actor check
+            if (_isWarehouseActor)
+            {
+                _state = ActorState.Finished;
+
+                this.enabled = false;
+                return;
             }
 
             _state = ActorState.WaitingForItem;

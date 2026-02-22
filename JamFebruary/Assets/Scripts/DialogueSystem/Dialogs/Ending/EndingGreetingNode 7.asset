@@ -16,11 +16,5 @@ MonoBehaviour:
   responses:
   - responseText: Y E S
     nextNode: {fileID: 11400000, guid: 440de5b41cb03ae44858ab4ed8e549fd, type: 2}
-  - responseText: Y ES
-    nextNode: {fileID: 11400000, guid: 440de5b41cb03ae44858ab4ed8e549fd, type: 2}
   - responseText: YES
-    nextNode: {fileID: 11400000, guid: 440de5b41cb03ae44858ab4ed8e549fd, type: 2}
-  - responseText: ' YE S'
-    nextNode: {fileID: 11400000, guid: 440de5b41cb03ae44858ab4ed8e549fd, type: 2}
-  - responseText: Y E S
     nextNode: {fileID: 11400000, guid: 440de5b41cb03ae44858ab4ed8e549fd, type: 2}

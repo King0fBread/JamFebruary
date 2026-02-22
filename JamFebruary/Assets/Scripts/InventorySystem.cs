@@ -23,6 +23,7 @@ public class InventorySystem : MonoBehaviour
             if(slot.IsOccupied == false)
             {
                 slot.SetItem(item);
+                SoundManager.instance.PlaySound(SoundManager.Sounds.PlayerPickupItem);
                 Destroy(physicalObject);
                 return;
             }
@@ -49,6 +50,7 @@ public class InventorySystem : MonoBehaviour
             if(slot.IsOccupied == true && slot.Item == itemToRemove)
             {
                 slot.ClearSlot();
+                SoundManager.instance.PlaySound(SoundManager.Sounds.PlayerPlaceItem);
                 return;
             }
         }

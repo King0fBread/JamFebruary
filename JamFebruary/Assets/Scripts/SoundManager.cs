@@ -39,20 +39,16 @@ public class SoundManager : MonoBehaviour
         PlayerFailed,
         PlayerSucceeded,
 
-        PlayerDialogueNodeChange,
         PlayerDialogueReply,
 
         EnvironmentDoorOpening,
         EnvironmentDoorClosing,
         EnvironmentCar,
 
-        BackgroundWarehouse,
-        BackgroundApartmentStreet,
-        BackgroundFloor0,
-        BackgroundFloorHuman,
+        BackgroundStreet,
+        BackgroundFloor01,
         BackgroundFloorCat,
         BackgroundFloorIce,
-        BackgroundFloorRainbow,
         BackgroundFloorVoid,
     }
     public void PlaySound(Sounds sound, bool shouldLoop = false)

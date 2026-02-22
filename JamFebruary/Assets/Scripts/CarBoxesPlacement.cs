@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class CarBoxesPlacement : MonoBehaviour
@@ -8,6 +9,8 @@ public class CarBoxesPlacement : MonoBehaviour
 
     [SerializeField] private GameObject _player;
     [SerializeField] private Transform _positionToMove;
+
+    [SerializeField] private GameObject _truckBlackScreen;
 
     private float _currentAmountOfPlacements;
     private void Awake()
@@ -23,14 +26,17 @@ public class CarBoxesPlacement : MonoBehaviour
             {
                 _inventorySystem.RemoveAll();
                 _currentAmountOfPlacements++;
-                CheckPlacements();
+                StartCoroutine(CheckPlacements());
             }
         }
     }
-    private void CheckPlacements()
+    private IEnumerator CheckPlacements()
     {
         if(_currentAmountOfPlacements >= _requiredAmountOfPlacements)
         {
+            _truckBlackScreen.SetActive(true);
+            SoundManager.instance.PlaySound(SoundManager.Sounds.EnvironmentCar);
+            yield return new WaitForSeconds(1f);
             _player.transform.position = _positionToMove.position;
         }
     }

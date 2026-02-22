@@ -31,6 +31,8 @@ public class KnockingSystem : MonoBehaviour
         print("cleared");
         _currentKnockable = null;
         _knockingText.gameObject.SetActive(false);
+
+        //SoundManager.instance.PlaySound(SoundManager.Sounds.EnvironmentDoorClosing);
     }
 
     public void TryToggleKnockableResident()
@@ -39,6 +41,8 @@ public class KnockingSystem : MonoBehaviour
         {
             _currentKnockable.ToggleResident(true);
             _knockingText.gameObject.SetActive(false);
+
+            SoundManager.instance.PlaySound(SoundManager.Sounds.PlayerKnocking);
         }
     }
 
