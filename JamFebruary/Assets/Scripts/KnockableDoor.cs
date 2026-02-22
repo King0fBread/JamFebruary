@@ -24,6 +24,11 @@ public class KnockableDoor : MonoBehaviour
     {
         if(_actorToActivate != null)
         {
+            if (state == true && _actorToActivate.GetState() == DialogueActor.ActorState.Finished)
+            {
+                return;
+            }
+
             _actorToActivate.gameObject.SetActive(state);
         }
     }

@@ -12,11 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1779a5e4f57237a4088d5902a3eecc93, type: 3}
   m_Name: ManamiEndNode
   m_EditorClassIdentifier: 
-  dialogueText: It really is. Unfoortunately, the business is closed for this week
-    for a reconstruction, so I'm stuck inside... I wish I had some toy to play with,
-    since my bad eyesight makes movies unwatchable.
-  responses:
-  - responseText: I'll figure something out for you!
-    nextNode: {fileID: 11400000}
-  - responseText: I'll be right back!
-    nextNode: {fileID: 11400000}
+  dialogueText: 
+  responses: []

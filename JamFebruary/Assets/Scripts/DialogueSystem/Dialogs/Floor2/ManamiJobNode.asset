@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1779a5e4f57237a4088d5902a3eecc93, type: 3}
   m_Name: ManamiJobNode
   m_EditorClassIdentifier: 
-  dialogueText: Oh, I see. It's that new service that delivers anything I wish. Let
-    me think...
+  dialogueText: Oh, I see. It's that new service that delivers anything I wish, right?
+    Let me think...
   responses:
   - responseText: Perhaps some cat food?
     nextNode: {fileID: 11400000, guid: 04164c59a6f688c4899dfc4aa0f2e07b, type: 2}

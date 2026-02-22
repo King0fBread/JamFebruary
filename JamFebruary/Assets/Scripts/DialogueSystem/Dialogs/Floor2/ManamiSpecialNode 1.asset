@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1779a5e4f57237a4088d5902a3eecc93, type: 3}
   m_Name: ManamiSpecialNode 1
   m_EditorClassIdentifier: 
-  dialogueText: I know it. Every action you an me ever took led to us talking to
+  dialogueText: I know it. Every action you and me ever took led to us talking to
     each other right now! Isn't that truly magical?
   responses:
   - responseText: Totally, I feel like this exactly where I should be...
     nextNode: {fileID: 11400000, guid: 419bad667527c174ab1b6008fa5452d3, type: 2}
   - responseText: I'm not sure why I came here.
-    nextNode: {fileID: 11400000, guid: 6201bfb9ed7a56641a99a78196f97a07, type: 2}
+    nextNode: {fileID: 11400000, guid: d5562ce6a165a4741b9d11ebc59ae6ac, type: 2}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1779a5e4f57237a4088d5902a3eecc93, type: 3}
+  m_Name: VoidEvilNode
+  m_EditorClassIdentifier: 
+  dialogueText: I am simply nothing. A representation of my surroundings. I am both
+    a genius and a fool, a king and a peasant. But I am by nature always hungry for
+    more. More experiences.
+  responses:
+  - responseText: C-can I offer you some food then?
+    nextNode: {fileID: 11400000, guid: ebc73e52a30f89a43888e3a6d121da97, type: 2}
+  - responseText: I believe we have some cat food.
+    nextNode: {fileID: 11400000, guid: dceadd0b413c9794fb106e5f02236bcd, type: 2}

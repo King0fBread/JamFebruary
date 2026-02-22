@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1779a5e4f57237a4088d5902a3eecc93, type: 3}
+  m_Name: KuronagiEatNode
+  m_EditorClassIdentifier: 
+  dialogueText: I have never tried any human food except for chips. But I do have
+    an oven in my apartment...
+  responses:
+  - responseText: An oven? I might have an Idea.
+    nextNode: {fileID: 11400000, guid: dad9ff6e454f1ec4ea27f5104b2e8614, type: 2}
+  - responseText: I'll be right back!
+    nextNode: {fileID: 11400000, guid: dad9ff6e454f1ec4ea27f5104b2e8614, type: 2}

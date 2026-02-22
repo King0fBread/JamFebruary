@@ -16,5 +16,5 @@ MonoBehaviour:
   responses:
   - responseText: Good morning.
     nextNode: {fileID: 11400000, guid: 7a9cfa669d81fd44eb71b8394eefa523, type: 2}
-  - responseText: Hey Yuuto, what's up!
+  - responseText: Hey Yuka, what's up!
     nextNode: {fileID: 11400000, guid: 7a9cfa669d81fd44eb71b8394eefa523, type: 2}

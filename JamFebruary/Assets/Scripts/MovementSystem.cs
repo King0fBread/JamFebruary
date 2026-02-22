@@ -6,7 +6,7 @@ using UnityEngine;
 public class MovementSystem : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed = 3f;
-    [SerializeField] private Animator _playerAnimator;
+    private Animator _playerAnimator;
 
     private ItemPickupSystem _itemPickupSystem;
 
@@ -35,6 +35,8 @@ public class MovementSystem : MonoBehaviour
         //Cursor.lockState = CursorLockMode.Locked;
 
         _itemPickupSystem = gameObject.GetComponent<ItemPickupSystem>();
+
+        _playerAnimator = gameObject.GetComponent<Animator>();
 
         _rigidbody = GetComponent<Rigidbody2D>();
         _originalScale = transform.localScale;
@@ -89,6 +91,12 @@ public class MovementSystem : MonoBehaviour
                 _originalScale.y,
                 _originalScale.z
             );
+
+            _playerAnimator.CrossFade("PlayerRunning", 0, 0);
+        }
+        else
+        {
+            _playerAnimator.CrossFade("PlayerIdle", 0, 0);
         }
     }
 }

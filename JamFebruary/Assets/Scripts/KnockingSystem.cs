@@ -38,6 +38,7 @@ public class KnockingSystem : MonoBehaviour
         if(_currentKnockable != null)
         {
             _currentKnockable.ToggleResident(true);
+            _knockingText.gameObject.SetActive(false);
         }
     }
 

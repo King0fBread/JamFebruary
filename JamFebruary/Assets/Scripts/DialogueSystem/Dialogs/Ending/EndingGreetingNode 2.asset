@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1779a5e4f57237a4088d5902a3eecc93, type: 3}
+  m_Name: EndingGreetingNode 2
+  m_EditorClassIdentifier: 
+  dialogueText: I feel your angry and confused throughts, and let me assure you -
+    this is not your friend. I simply took the shape of her soul, because this is
+    what your mind desired me to be the most.
+  responses:
+  - responseText: ...
+    nextNode: {fileID: 11400000, guid: fe9aa600d5ce6cd43807419ab98de7dc, type: 2}

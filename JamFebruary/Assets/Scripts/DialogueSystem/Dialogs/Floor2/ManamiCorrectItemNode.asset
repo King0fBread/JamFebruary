@@ -18,6 +18,6 @@ MonoBehaviour:
     a coffee?
   responses:
   - responseText: I would... really like that. See you then.
-    nextNode: {fileID: 11400000, guid: cabbc0cb130b1fc41a88be1c1274b5b8, type: 2}
+    nextNode: {fileID: 11400000, guid: 63b99b70e60751e47b180b5f92a6161e, type: 2}
   - responseText: Sorry I'm quite busy. Have a good day!
-    nextNode: {fileID: 11400000, guid: cabbc0cb130b1fc41a88be1c1274b5b8, type: 2}
+    nextNode: {fileID: 11400000, guid: 63b99b70e60751e47b180b5f92a6161e, type: 2}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1779a5e4f57237a4088d5902a3eecc93, type: 3}
+  m_Name: VoidConsumptionNode
+  m_EditorClassIdentifier: 
+  dialogueText: Consumption. This is where you and me share a similarity, young one.
+    However, I do not desire organic materials such as your "food". I consume experiences.
+  responses:
+  - responseText: Well, we also sell some books...
+    nextNode: {fileID: 11400000, guid: 780ec21e7c4d67547bd1ab45aec1d869, type: 2}

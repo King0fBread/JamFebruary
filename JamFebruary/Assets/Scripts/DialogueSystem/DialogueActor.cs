@@ -3,6 +3,7 @@ using UnityEngine;
 public class DialogueActor : MonoBehaviour, IInteractable
 {
     [SerializeField] private InventorySystem _inventorySystem;
+    [SerializeField] private DeliverySatisfactionCounters _deliverySatisfactionCounters;
 
     public string Name;
 
@@ -14,10 +15,13 @@ public class DialogueActor : MonoBehaviour, IInteractable
     [Header("Conditions")]
     public InventoryItem RequiredItem;
 
-    private bool _hasMet = false;
+    //private bool _hasMet = false;
     private DialogueNode _currentNode;
 
-    private enum ActorState
+    [SerializeField] private bool _isFinaleActor = false;
+    [SerializeField] private GameObject _fadeObject;
+
+    public enum ActorState
     {
         FirstMeeting,
         WaitingForItem,
@@ -72,7 +76,7 @@ public class DialogueActor : MonoBehaviour, IInteractable
 
             case ActorState.WaitingForItem:
 
-                // Player has item → progress quest
+                // Player has the correct item progress
                 if (RequiredItem != null &&
                     _inventorySystem.HasItem(RequiredItem))
                 {
@@ -80,10 +84,13 @@ public class DialogueActor : MonoBehaviour, IInteractable
 
                     _state = ActorState.ItemDelivered;
 
+                    _deliverySatisfactionCounters.IncreaseDeliveryCount();
+
                     return HasItemDialogue;
                 }
 
-                // Player came back empty → False Item dialogue
+                // Player has the wrong item or no item
+                _deliverySatisfactionCounters.RegisterFailedDelivery();
                 return NoItemDialogue;
 
             case ActorState.ItemDelivered:
@@ -99,6 +106,13 @@ public class DialogueActor : MonoBehaviour, IInteractable
 
         if (_state == ActorState.FirstMeeting)
         {
+            //final actor check
+            if (_isFinaleActor)
+            {
+                if (_fadeObject != null)
+                    _fadeObject.SetActive(true);
+            }
+
             _state = ActorState.WaitingForItem;
         }
         else if (_state == ActorState.ItemDelivered)
@@ -115,5 +129,10 @@ public class DialogueActor : MonoBehaviour, IInteractable
     public void SetProgress(DialogueNode node)
     {
         _currentNode = node;
+    }
+
+    public ActorState GetState()
+    {
+        return _state;
     }
 }
