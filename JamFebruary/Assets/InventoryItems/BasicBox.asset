@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b745c0e676bcb9459ba03002842edfc, type: 3}
   m_Name: BasicBox
   m_EditorClassIdentifier: 
-  ItemName: BasicBox
+  ItemName: A Box
   ItemSprite: {fileID: 7105157636625340409, guid: ae07a06042c74db4891870adac17980b, type: 3}

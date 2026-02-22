@@ -73,6 +73,7 @@ public class DialogueActor : MonoBehaviour, IInteractable
         switch (_state)
         {
             case ActorState.FirstMeeting:
+                MovementSystem.Instance.ToggleCanMove(false);
                 return FirstMeetingDialogue;
 
             case ActorState.WaitingForItem:
@@ -104,6 +105,8 @@ public class DialogueActor : MonoBehaviour, IInteractable
     public void OnDialogueFinished()
     {
         _currentNode = null;
+
+        MovementSystem.Instance.ToggleCanMove(true);
 
         if (_state == ActorState.FirstMeeting)
         {

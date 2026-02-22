@@ -14,10 +14,10 @@ public class MovementSystem : MonoBehaviour
     private Vector2 _movementVector;
 
     private Vector3 _originalScale;
+    private bool _canMove;
 
     public InputSystem_Actions InputSystemActions;
 
-    private float _lastDirection = 1f;
     //public event Action OnInteractPressed;
 
     private static MovementSystem _instance;
@@ -39,6 +39,8 @@ public class MovementSystem : MonoBehaviour
         _itemPickupSystem = gameObject.GetComponent<ItemPickupSystem>();
 
         _playerAnimator = gameObject.GetComponent<Animator>();
+
+        _canMove = true;
 
         _rigidbody = GetComponent<Rigidbody2D>();
         _originalScale = transform.localScale;
@@ -74,6 +76,9 @@ public class MovementSystem : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!_canMove)
+            return;
+
         MovePlayer();
     }
     private void MovePlayer()
@@ -85,22 +90,31 @@ public class MovementSystem : MonoBehaviour
 
         _rigidbody.MovePosition(targetPos);
 
+        // Flip sprite
         if (moveX != 0)
         {
-            float direction = Mathf.Sign(moveX);
-
             transform.localScale = new Vector3(
-                direction * 1f,
-                1f,
-                1f
+                Mathf.Sign(moveX) * _originalScale.x,
+                _originalScale.y,
+                _originalScale.z
             );
 
             _playerAnimator.CrossFade("PlayerRunning", 0, 0);
+
+            //SoundManager.instance.PlaySound(SoundManager.Sounds.PlayerWalking);
         }
         else
         {
-            transform.localScale = _originalScale;
+            _playerAnimator.CrossFade("PlayerIdle", 0, 0);
 
+            //SoundManager.instance.StopSound(SoundManager.Sounds.PlayerWalking);
+        }
+    }
+    public void ToggleCanMove(bool state)
+    {
+        _canMove = state;
+        if(state == false)
+        {
             _playerAnimator.CrossFade("PlayerIdle", 0, 0);
         }
     }
