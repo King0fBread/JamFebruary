@@ -16,6 +16,8 @@ public class MovementSystem : MonoBehaviour
     private Vector3 _originalScale;
 
     public InputSystem_Actions InputSystemActions;
+
+    private float _lastDirection = 1f;
     //public event Action OnInteractPressed;
 
     private static MovementSystem _instance;
@@ -83,24 +85,23 @@ public class MovementSystem : MonoBehaviour
 
         _rigidbody.MovePosition(targetPos);
 
-        // Flip sprite
         if (moveX != 0)
         {
+            float direction = Mathf.Sign(moveX);
+
             transform.localScale = new Vector3(
-                Mathf.Sign(moveX) * _originalScale.x,
-                _originalScale.y,
-                _originalScale.z
+                direction * 1f,
+                1f,
+                1f
             );
 
             _playerAnimator.CrossFade("PlayerRunning", 0, 0);
-
-            //SoundManager.instance.PlaySound(SoundManager.Sounds.PlayerWalking);
         }
         else
         {
-            _playerAnimator.CrossFade("PlayerIdle", 0, 0);
+            transform.localScale = _originalScale;
 
-            //SoundManager.instance.StopSound(SoundManager.Sounds.PlayerWalking);
+            _playerAnimator.CrossFade("PlayerIdle", 0, 0);
         }
     }
 }
