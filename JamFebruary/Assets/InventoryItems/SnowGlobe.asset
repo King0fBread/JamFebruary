@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SnowGlobe
   m_EditorClassIdentifier: 
   ItemName: Snow Globe
-  ItemSprite: {fileID: 4102887561393458774, guid: 0f03aa86103b6e24e81cb6b99bd449a9, type: 3}
+  ItemSprite: {fileID: 21300000, guid: 0f03aa86103b6e24e81cb6b99bd449a9, type: 3}

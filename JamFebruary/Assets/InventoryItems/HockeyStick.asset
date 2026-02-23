@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: HockeyStick
   m_EditorClassIdentifier: 
   ItemName: Hockey Stick
-  ItemSprite: {fileID: 699286465556728714, guid: 68b184de2d3e8c64c93fc4c29a05f2f1, type: 3}
+  ItemSprite: {fileID: 21300000, guid: 68b184de2d3e8c64c93fc4c29a05f2f1, type: 3}
